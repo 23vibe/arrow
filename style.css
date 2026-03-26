@@ -1,0 +1,358 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  width: 100%;
+  margin: 0;
+  background-color: #222;
+  color: white;
+}
+
+@font-face {
+  font-family: myFont; /* set name */
+  src: url("fonts/SankofaDisplay-Regular.ttf"); /* url of the font */
+}
+
+img { width: 100%
+}
+
+hr {color:#666; with: 100%;max-width:1200px;opacity:0.5;}
+
+h1{font-family: myFont;}
+
+h2{
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;}
+
+p {
+  display: block;
+  text-align: justify;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+}
+
+
+/* ---- nav ---- */
+
+.navigation {
+  display: block;
+  top: 0;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  margin: auto;
+  background-color: #333;
+}
+.navigation img {
+  width: 25px;
+  height: auto;
+  border: none;
+}
+
+ul.topnav {
+  margin: auto;
+  with: 100%;
+  background-color: #333;
+  padding: 1em;
+  padding-left: 0px;
+  max-width: 1200px;
+  list-style-type: none;
+  overflow: hidden;
+  background-color: #333;
+}
+ul.topnav li {display: block;width:200px;
+  float: left;text-align: center;
+}
+
+ul.topnav li.first {width:100px;padding-left:1rem;}
+
+ul.topnav li a {
+  font-family: myFont;
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  line-height: 30px;
+  padding: 0px 0px;
+  text-decoration: none;
+  cursor: pointer;
+}
+ul.topnav li a:hover {
+  color: lightgray;font-size: 2.25rem;
+}
+ul.topnav li a.active {
+  color: orange !important;
+}
+ul.topnav li.right {
+  float: right;
+}
+#status {
+  margin: 0;
+  display: flex;
+  text-align: center;
+  line-height: 30px;
+  padding: 20px 16px;
+  text-decoration: none;
+}
+.content {
+  background: #000;
+  width: 100%;
+}
+
+
+/* ---- gallery ---- */
+
+#gallery {
+  display: block;
+  padding-top: 100px;
+  background: #000;
+  width: 100%;
+  height: 100vh;
+}
+
+.grid {
+  padding-top: 20px;
+  background: #000;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  counter-reset: grid-item;
+}
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+
+/* ---- grid-item ---- */
+
+.grid-item {
+  padding: 4px;
+  margin-top: 20px;
+  width: 225px;
+  height: content;
+  float: left;
+  background: transparent;
+  border: 0px solid #333;
+  border-color: hsla(0, 0%, 0%, 0.5);
+  border-radius: 0px;
+}
+.grid-item:before {
+  counter-increment: grid-item;
+  content: counter(grid-item);
+  display: none;
+  color: white;
+  padding-top: 0.2em;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+
+/* ---- form ---- */
+
+
+#contactform {
+  display: block;
+  padding-top: 180px;
+  background: #000;
+  width: 100%;
+  height: 94vh;
+}
+
+textarea {
+  display: block;
+  border: none;
+  color: orange;
+  background-color: #222222;
+  padding-top: 1em;
+  text-align: center;
+  font-size: 0.8rem;
+  width: 50%;
+  height: 300px;
+}
+input {
+  display: block;
+  border: none;
+  color: orange;
+  background-color: #222222;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 1.8rem;
+  width: 30%;
+}
+button {
+  display: block;
+  border: none;
+  text-transform: uppercase;
+  color: white;
+  background-color: #666;
+  text-align: center;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: bold;
+  line-height: 2.8rem;
+  width: 20%;
+}
+button:hover {
+  display: block;
+  border: none;
+  text-transform: uppercase;
+  color: orange;
+  background-color: #444;
+}
+
+
+/* ---- footer ---- */
+
+footer {
+  width: 100%;
+  display: block;
+  border: none;
+  color: #ddd;
+  background-color: #222222;
+  text-align: center;
+  font-size: 0.6rem;
+  font-weight: regular;
+  line-height: 1.8rem;
+}
+.footer a {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-size: 0.6rem;
+  font-weight: bold;
+  line-height: 2.8rem;
+}
+
+
+
+
+/* lightbox */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;cursor: pointer;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {background-color: black; text-align: center;
+  display: none;
+}
+
+.mySlides img {width:auto;height:96vh;
+
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
