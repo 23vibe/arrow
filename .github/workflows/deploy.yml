@@ -30,7 +30,7 @@ jobs:
           python-version: '3.x'
 
       - name: Generate image manifest
-        run: python misc/generate_manifest.py
+        run: python scripts/generate_manifest.py
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
