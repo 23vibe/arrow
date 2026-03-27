@@ -1,7 +1,1 @@
-// external js: masonry.pkgd.js
-
-$('.grid').masonry({
-  itemSelector: '.grid-item',
-  columnWidth: 120,
-  horizontalOrder: true
-});
+// Masonry is initialized in index.html after gallery items are dynamically loaded.

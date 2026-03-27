@@ -157,9 +157,13 @@
 			'<div class="caption-container"><p id="caption"></p></div>'
 		);
 
-		// Re-layout Masonry after all items are injected
-		$(gallery).masonry('reloadItems');
-		$(gallery).masonry();
+		// Init Masonry now that all items are in the DOM with known heights
+		$(gallery).masonry({
+			itemSelector: '.grid-item',
+			columnWidth: 225,
+			horizontalOrder: true,
+			gutter: 0
+		});
 	}).catch(function (err) {
 		console.error('Failed to load resources:', err);
 	});
