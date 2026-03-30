@@ -1,79 +1,61 @@
-# static-shop
-Static web app template with product portfolio and function app integration.
+# Maxim Dokalenko — Static Web App
 
-🏗️ Architecture Overview
-1. Static Web App (HTML + CSS)
-Hosted on Azure Static Web Apps (or Azure Storage with static website hosting).
-Contains your form (<form> with fields like name, email, message).
-2. Azure Function App (API)
-Exposed as an API endpoint (/api/sendEmail).
-Triggered by HTTP POST from your form.
-Uses an email service (e.g., SendGrid, SMTP, or Azure Communication Services) to send the email.
+Lightweight static web app with a small Python-based API (Azure Function) for sending email via Brevo (Sendinblue).
 
-## Project structure
+## Features
+- Static frontend (HTML/CSS/JS)
+- Azure Functions-based `sendEmail` endpoint (uses Brevo SDK)
+- Example request helper script for local testing (`request.py`)
+- Utility script(s) in `scripts/`
+
+## Quick Start
+
+Prerequisites
+- Python 3.8+ and `pip`
+- (Optional) Azure Functions Core Tools if you want to run the Function locally: https://learn.microsoft.com/azure/azure-functions/functions-run-local
+
+Run the static site locally
+```bash
+# from repository root
+python -m http.server 8000
+# then open http://localhost:8000
 ```
-azure-static-form-email/
-│
-├── README.md
-├── staticwebapp.config.json
-├── index.html
-├── style.css
-├── .github/
-│   └── workflows/
-│       └── azure-static-web-apps.yml
-└── api/
-    ├── host.json
-    ├── requirements.txt
-    ├── local.settings.json         # for local dev only (not deployed - add to .gitignore)
-    ├── sendEmail/
-    │   ├── __init__.py
-    │   └── function.json
-    └── shared/
-        └── email_provider.py
 
+Run the API (Azure Function) locally
+```bash
+cd api
+pip install -r requirements.txt
+# Ensure any required settings (see local.settings.json) are set, e.g. BREVO_API_KEY for the email provider
+# Start the Functions host (requires Azure Functions Core Tools):
+func start
 ```
-## Deployment
-CI/CD pipeline for updates.
 
-🔑 Setup Steps
-Create Static Web App in Azure Portal → point it to your GitHub repo (or local build).
-Add Function App inside the same Static Web App (Azure automatically wires /api/* routes).
-Configure SendGrid (or another email provider):
-Create a SendGrid resource in Azure Marketplace.
-Get the API key.
-Add it to your Function App’s Application Settings as SENDGRID_API_KEY.
-Deploy → GitHub Actions or Azure DevOps pipeline will handle CI/CD.
+Test the `sendEmail` endpoint
+- `request.py` is a small example script that POSTs JSON to `http://localhost:7071/api/sendEmail` when the Functions host is running.
 
-# Generated markdown
+## Configuration
+- `api/local.settings.json` contains local settings used by the Functions host. Do not commit production secrets.
+- `api/sendEmail/email_provider.py` expects an environment variable `BREVO_API_KEY` (Brevo / Sendinblue API key).
 
-# Static contact form + Azure Function email
+## Files & Structure
+- `_todo.txt` — project notes
+- `index.html`, `index copy.html` — frontend pages
+- `style.css` — main styles
+- `request.py` — example POST to the local `sendEmail` function
+- `api/` — Azure Functions project
+  - `host.json`, `local.settings.json` — Functions host config
+  - `requirements.txt` — Python dependencies for the Functions app
+  - `sendEmail/` — function that forwards mail via `api/sendEmail/email_provider.py`
+- `scripts/` — helper scripts (e.g. `generate_manifest.py`)
+- `static/`, `fonts/`, `images/` — static assets
 
-A minimal Azure Static Web App with a simple HTML+CSS contact form and a Python Azure Function that sends emails via SendGrid.
+## Notes
+- The `sendEmail` function uses Brevo (sib_api_v3_sdk). Ensure `BREVO_API_KEY` is available in the environment or in `local.settings.json` for local testing.
+- There are no deployment scripts included for Azure Static Web Apps or Function App in this repo; `staticwebapp.config.json` hints at static web app hosting. Configure CI/CD (GitHub Actions, Azure) separately.
 
-## Prerequisites
-- Azure subscription
-- GitHub repository
-- SendGrid account (or use Azure Marketplace SendGrid)
-- Python 3.10+ for local function testing
-- Azure Functions Core Tools for local run (optional)
+## Next steps / Suggestions
+- Add a brief CONTRIBUTING or DEPLOYMENT section if you want automated deploys
+- Add example env var templates (e.g. `.env.example`) and an Azure deployment guide if you plan to host in Azure
 
-## Quick start
-1. **Fork/clone** this repo.
-2. **Create Azure Static Web App** in Azure Portal.
-   - App location: `/`
-   - API location: `api`
-   - Output location: `/` (no build)
-3. **Configure application settings** in the SWA Function environment:
-   - `SENDGRID_API_KEY` = your SendGrid key
-   - `EMAIL_TO` = destination email (your inbox)
-   - `EMAIL_FROM` = verified sender (configure in SendGrid)
-4. **Set GitHub secret**:
-   - `AZURE_STATIC_WEB_APPS_API_TOKEN` = deployment token from SWA.
-5. **Push to main** – GitHub Actions will deploy automatically.
-
-## Local development
-- Install dependencies:
-  ```bash
-  cd api
-  pip install -r requirements.txt
-```
+---
+Generated documentation — edit to add project-specific details or credentials handling instructions.

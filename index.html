@@ -3,174 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <title>DJ Maxim Dokalenko</title>
+  <link rel="icon" type="image/png" sizes="512x512" href="static/vinyl.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="static/vinyl.png">
+  <link rel="shortcut icon" href="static/vinyl.png">
     <link rel="stylesheet" href="./style.css">
-
 </head>
-	
-	
-	
 <body>
-<div class="content">	  
-  <h1>GALERRY</h1>
-<div class="navigation">  
-<ul id="navigation" class="topnav">
-	<li class="first"><h2><a id="1nav" href="#gallery" onclick="getPage('1nav'); closeModal()">INTRO</a></h2></li>
-	<li><h2><a id="2nav" href="#gallery" onclick="getPage('2nav'); closeModal()">GALLERY</a></h2></li>
-	<li><h2><a id="3nav" href="#contactform" onclick="getPage('3nav');closeModal()">MUSIC</a></h2></li>
-  <li><h2><a id="3nav" href="#contactform" onclick="getPage('3nav');closeModal()">CONTACT ME</a></h2></li>
-</ul>
-</div>
-	
-<!-- Main Content -->
-	
-<div id="gallery" class="grid">
+<div class="content">
+  <div class="navigation">
+    <ul id="navigation" class="topnav">
+      <li class="first"><h2><a id="1nav" href="#intro" onclick="closeModal(); window.scrollTo({top:0, behavior:'smooth'}); return false;">INTRO</a></h2></li>
+      <li><h2><a id="2nav" href="#gallery" onclick="closeModal(); document.querySelector('#gallery').scrollIntoView({behavior:'smooth', block:'start'}); return false;">GALLERY</a></h2></li>
+      <li><h2><a id="3nav" href="#music" onclick="closeModal(); document.querySelector('#music').scrollIntoView({behavior:'smooth', block:'start'}); return false;">MUSIC</a></h2></li>
+      <li><h2><a id="4nav" href="#contactform" onclick="closeModal(); document.querySelector('#contactform').scrollIntoView({behavior:'smooth', block:'start'}); return false;">CONTACT ME</a></h2></li>
+    </ul>
   </div>
 
-  <!-- Contact form below gallery
+  <!-- Intro Section -->
+  <section id="intro" class="section">
+    <h2>DJ Maxim Dokalenko</h2>
+    <p>Mixing vinyls with booze since ~2k02. For the first 10 years, it was mostly Drum & Bass with an essence of Rap. Afterwards, the BPM grew into the breakcore and speedcore range. Now trying to erase the borders between genres, but also playing single-style mixes as well.
+		Played mostly across Slovakia in clubs and at free parties, but had some gigs in Czechia, Austria, and Russia as well. Maxim Dokalenko is a Lazy Bastard. Check the gallery for pieces from the early phases of his history, known as DJ Arrow.
+	</p>
+  </section>
+
+  <!-- Gallery Section -->
+  <div id="gallery" class="grid"></div>
+  <br>
+
+  <!-- Music Section -->
+  <section id="music" class="section">
+    <h2>Music</h2>
+    <p>Some picks from my <a target='blank' href="https://www.mixcloud.com/MaximDokalenko/">MixCloud</a>:</p>
+	<br>
+	<iframe width="100%" height="60" src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&feed=%2FMaximDokalenko%2F%25D0%25BA%25D0%25BE%25D0%25BD%25D1%258C%25D1%258F%25D1%2587%25D0%25BA%25D0%25B0-%25D0%25BD%25D0%25B5%25D0%25BC%25D0%25BD%25D0%25BE%25D0%25B6%25D0%25BA%25D0%25BE-%25D0%25B8-%25D0%25B4%25D0%25B2%25D0%25B0-%25D0%25BA%25D0%25BE%25D1%2581%25D1%258F%25D1%2587%25D0%25BA%25D0%25B0%2F" frameborder="0" allow="encrypted-media; fullscreen; autoplay; idle-detection; speaker-selection; web-share;" ></iframe>
+	<p>Drum-Tek</p><br>
+	<iframe width="100%" height="60" src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&light=1&feed=%2FMaximDokalenko%2Flikvid_dnb%2F" frameborder="0" allow="encrypted-media; fullscreen; autoplay; idle-detection; speaker-selection; web-share;" ></iframe>
+	<p>Drum-Breakcore</p><br>
+	<iframe width="100%" height="60" src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&feed=%2FMaximDokalenko%2Fno-compromise%2F" frameborder="0" allow="encrypted-media; fullscreen; autoplay; idle-detection; speaker-selection; web-share;" ></iframe>
+	<p>Breakcore set for <a target='blank' href="">No Compromise</a> online breakcore festival from Austrian Mountains. <i>Thanx to Ingo, I will search and update the link.</i></p><br>
+
+	<p>I am also a Radio23 supporter, we had a couple of streams back in 2009 with HEADSHOT crew. Radio23cz is on Mixcloud:</p>
+	<br>
+	<iframe width="100%" height="60" src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&light=1&feed=%2Fradio23cz%2Fpirate-free-tekno-stream-from-prague-20251113-190201%2F" frameborder="0" allow="encrypted-media; fullscreen; autoplay; idle-detection; speaker-selection; web-share;" ></iframe>
+	<p>The last Pirate Stream on Radio23cz (tek)</p><br>
+	<iframe width="100%" height="60" src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&feed=%2Fradio23cz%2Fwednesday-gafakor-with-maxim-dokalenko-20241106-210221%2F" frameborder="0" allow="encrypted-media; fullscreen; autoplay; idle-detection; speaker-selection; web-share;" ></iframe>
+	<p>Live stream to FUGA, Bratislava (rest in memories).</p><br>
+
+	<p>Check my <a target='blank' href="https://soundcloud.com/maxim-dokalenko">SoundCloud</a>:</p>
+	<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A322137717&color=%23a6a299&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/maxim-dokalenko" title="Maxim Dokalenko" target="_blank" style="color: #cccccc; text-decoration: none;">Maxim Dokalenko</a> · <a href="https://soundcloud.com/maxim-dokalenko/mucka" title="Mucka" target="_blank" style="color: #cccccc; text-decoration: none;">Mucka</a></div>
+	<p>My only released track on <a target='blank' href="https://statuesofsound.bandcamp.com/album/statues-of-sound-12">Statues of Sound 12</a>, a Slovak underground music compilation.</p><br>
+	<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1804916628&color=%23162126&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/maxim-dokalenko" title="Maxim Dokalenko" target="_blank" style="color: #cccccc; text-decoration: none;">Maxim Dokalenko</a> · <a href="https://soundcloud.com/maxim-dokalenko/basement-tek" title="Basement Tek" target="_blank" style="color: #cccccc; text-decoration: none;">Basement Tek</a></div>
+	<p>Recording from one of my Thursday tekno events in Recykl music club, Prague.</p><br>
+
+	<p>My <a target='blank' href="https://bandcamp.com/maximdokalenko/">Bandcamp</a> collection.</p>
+
+  </section>
+
+  <!-- Contact Form Section (Commented Out) -->
+  
   <main id="contactform" class="container">
-    <center>
-    <section class="illustration">
-        <div><h1>Contact me</h1></div-->
-    <!-- toto ma byt profilovka -->
-      <!-- <img src="static/images/img_21.jpg" width="800" alt="Welcome illustration" class="contact-img" /> -->
-    <!-- </section>
-    <br> -->
-
-    <!-- <form id="contactForm">
-      <label-->
-        <!--Name -->
-        <!-- <input type="text" placeholder="Your name" name="name" required />
-      </label>
-      <br>
-      <label> -->
-        <!-- Email -->
-        <!-- <input type="email" placeholder="Your email" name="email" required />
-      </label>
-      <br>
-      <label-->
-        <!-- Message -->
-        <!-- <textarea name="message" placeholder="Type your message" rows="5" required></textarea>
-      </label>
-      <br>
-      <button type="submit">Send</button>
-      <p id="status" aria-live="polite"></p>
-      </center>
-    </form> -->
-  <!-- </main> --> 
-<div id="myModal" class="modal">
-  <div class="modal-content" id="modalContent">
+    <center>	
+      <section class="illustration">
+        <div><h1>Contact me</h1></div>
+      </section>
+      <form id="contactForm">
+        <label>
+          <input type="text" placeholder="Your name" name="name" required />
+        </label>
+        <br>
+        <label>
+          <input type="email" placeholder="Your email" name="email" required />
+        </label>
+        <br>
+        <label>
+          <textarea name="message" placeholder="Type your message, but contact form is currently offline (not sending anything anywhere). The site is still under construction." rows="5" required></textarea>
+        </label>
+        <br>
+        <button type="submit">Send</button>
+        <p id="status" aria-live="polite"></p>
+      </form>
+    </center>
+  </main>
+ 
+  <!-- Modal Section -->
+  <div id="myModal" class="modal">
+    <div class="modal-content" id="modalContent"></div>
   </div>
-</div>
-<footer class="footer"> -->
-    <!--img src="static/images/footer-bg.jpg" alt="Footer background" class="footer-img" width="800"/-->
-    <!--p>Static web app with managed functions (prototype) by Iv.Siv. [github.com/ivsiv], design by P.Ju. (2025)</p-->
+
+  <footer class="footer">
     Data privacy statement: <a href="disclaimer.html">Read our disclaimer</a>
-</footer>
+  </footer>
 
   <script>
-    const form = document.getElementById("contactForm");
-    const status = document.getElementById("status");
+    Promise.all([
+      fetch('static/images/manifest.json').then((r) => r.json()),
+      fetch('static/info.txt').then((r) => r.text())
+    ]).then((results) => {
+      const images = results[0].images;
+      const infoText = results[1];
 
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      status.textContent = "Sending...";
-      const payload = Object.fromEntries(new FormData(form).entries());
-
-      try {
-        const res = await fetch("/api/sendEmail", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload),
-        });
-
-        if (res.ok) {
-          status.textContent = "Message sent. Thank you!";
-          form.reset();
-        } else {
-          const text = await res.text();
-          status.textContent = `Error: ${text || "Failed to send"}`;
-        }
-      } catch (err) {
-        status.textContent = "Network error. Please try again.";
+      // Fisher-Yates shuffle
+      for (let i = images.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [images[i], images[j]] = [images[j], images[i]];
       }
+
+      const sentences = infoText.split('.')
+        .map((s) => s.trim())
+        .filter((s) => s.length > 0);
+
+      const items = images.map((img) => ({ type: 'image', name: img }));
+      sentences.forEach((sentence) => {
+        const pos = Math.floor(Math.random() * (items.length + 1));
+        items.splice(pos, 0, { type: 'text', text: sentence });
+      });
+
+      const gallery = document.getElementById('gallery');
+      const modalContent = document.getElementById('modalContent');
+      let imageCounter = 0;
+
+      items.forEach((item) => {
+        const div = document.createElement('div');
+        if (item.type === 'text') {
+          div.className = 'grid-item';
+          div.innerHTML = `<p>${item.text}</p>`;
+        } else {
+          imageCounter++;
+          const src = `static/images/${encodeURIComponent(item.name)}`;
+          div.className = 'grid-item grid-item--height3';
+          div.innerHTML = `<div class="column"><img src="${src}" onclick="openModal(); currentSlide(${imageCounter});" class="hover-shadow cursor" loading="lazy"></div>`;
+        }
+        gallery.appendChild(div);
+      });
+
+      images.forEach((img, idx) => {
+        const src = `static/images/${encodeURIComponent(img)}`;
+        const div = document.createElement('div');
+        div.className = 'mySlides';
+        div.setAttribute('onclick', 'closeModal()');
+        div.innerHTML = `<div class="numbertext">${idx + 1} / ${images.length}</div><img src="${src}">`;
+        modalContent.appendChild(div);
+      });
+
+      modalContent.insertAdjacentHTML('beforeend',
+        '<a class="prev" onclick="plusSlides(-1)">&#10094;</a>' +
+        '<a class="next" onclick="plusSlides(1)">&#10095;</a>' +
+        '<div class="caption-container"><p id="caption"></p></div>'
+      );
+
+      $(gallery).masonry({
+        itemSelector: '.grid-item',
+        columnWidth: 225,
+        horizontalOrder: true,
+        gutter: 0
+      });
+    }).catch((err) => {
+      console.error('Failed to load resources:', err);
     });
   </script>
-	<script>
-	Promise.all([
-		fetch('static/images/manifest.json').then(function (r) { return r.json(); }),
-		fetch('static/info.txt').then(function (r) { return r.text(); })
-	]).then(function (results) {
-		var images = results[0].images;
-		var infoText = results[1];
-
-		// Fisher-Yates shuffle
-		for (var i = images.length - 1; i > 0; i--) {
-			var j = Math.floor(Math.random() * (i + 1));
-			var tmp = images[i]; images[i] = images[j]; images[j] = tmp;
-		}
-
-		// Split info.txt by dot, trim, drop empty
-		var sentences = infoText.split('.')
-			.map(function (s) { return s.trim(); })
-			.filter(function (s) { return s.length > 0; });
-
-		// Build combined items array: images first, then randomly insert text items
-		var items = images.map(function (img) { return { type: 'image', name: img }; });
-		sentences.forEach(function (sentence) {
-			var pos = Math.floor(Math.random() * (items.length + 1));
-			items.splice(pos, 0, { type: 'text', text: sentence });
-		});
-
-		var gallery = document.getElementById('gallery');
-		var modalContent = document.getElementById('modalContent');
-		var imageCounter = 0;
-
-		// Render gallery (images + text blocks interleaved)
-		items.forEach(function (item) {
-			var div = document.createElement('div');
-			if (item.type === 'text') {
-				div.className = 'grid-item';
-				div.innerHTML = '<p>' + item.text + '</p>';
-			} else {
-				imageCounter++;
-				var src = 'static/images/' + encodeURIComponent(item.name);
-				div.className = 'grid-item grid-item--height3';
-				div.innerHTML = '<div class="column"><img src="' + src + '" onclick="openModal(); currentSlide(' + imageCounter + ');" class="hover-shadow cursor" loading="lazy"></div>';
-			}
-			gallery.appendChild(div);
-		});
-
-		// Build modal slides (images only, in their shuffled order)
-		images.forEach(function (img, idx) {
-			var src = 'static/images/' + encodeURIComponent(img);
-			var div = document.createElement('div');
-			div.className = 'mySlides';
-			div.setAttribute('onclick', 'closeModal()');
-			div.innerHTML = '<div class="numbertext">' + (idx + 1) + ' / ' + images.length + '</div><img src="' + src + '">';
-			modalContent.appendChild(div);
-		});
-
-		// Add navigation and caption
-		modalContent.insertAdjacentHTML('beforeend',
-			'<a class="prev" onclick="plusSlides(-1)">&#10094;</a>' +
-			'<a class="next" onclick="plusSlides(1)">&#10095;</a>' +
-			'<div class="caption-container"><p id="caption"></p></div>'
-		);
-
-		// Init Masonry now that all items are in the DOM with known heights
-		$(gallery).masonry({
-			itemSelector: '.grid-item',
-			columnWidth: 225,
-			horizontalOrder: true,
-			gutter: 0
-		});
-	}).catch(function (err) {
-		console.error('Failed to load resources:', err);
-	});
-	</script>
-	<script src="scripts/jquery.min.js"></script>
-	<script src="scripts/masonry.pkgd.js"></script>
-	<script  src="scripts/script.js"></script>
-	<script  src="scripts/modalbox.js"></script>
-</body>  
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/masonry.pkgd.js"></script>
+  <script src="scripts/script.js"></script>
+  <script src="scripts/modalbox.js"></script>
+</body>
 </html>

@@ -26,7 +26,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
     try:
         provider = EmailProvider()
-        to_email = "veronika.majickova@gmail.com" #os.environ.get("EMAIL_TO")
+        to_email = os.environ.get("EMAIL_TO")
         from_email = os.environ.get("EMAIL_FROM")
         if not to_email or not from_email:
             return func.HttpResponse("Email settings not configured", status_code=500)
