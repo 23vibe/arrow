@@ -168,7 +168,8 @@
 
       $(gallery).masonry({
         itemSelector: '.grid-item',
-        columnWidth: 225,
+        columnWidth: '.grid-item',
+        percentPosition: true,
         horizontalOrder: true,
         gutter: 0
       });

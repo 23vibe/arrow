@@ -193,7 +193,7 @@ ul.topnav li.right {
 .grid-item {
   padding: 4px;
   margin-top: 20px;
-  width: 225px;
+  width: 20%;
   height: auto;
   float: left;
   background: transparent;
@@ -471,10 +471,12 @@ img.hover-shadow {
     line-height: 1.6;
   }
 
-  /* Gallery - preserve original fixed sizes on mobile */
+  /* Gallery - 4 columns on mobile */
   .grid-item {
-    width: 20%;
+    width: 25%;
     height: auto;
+    margin-top: 4px;
+    padding: 2px;
   }
 
   .grid-item--height3 {
