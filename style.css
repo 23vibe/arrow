@@ -18,7 +18,7 @@ body {
 img { width: 100%
 }
 
-hr {color:#666; with: 100%;max-width:1200px;opacity:0.5;}
+hr {color:#666; width: 100%;max-width:1200px;opacity:0.5;}
 
 h1{font-family: myFont;}
 
@@ -107,7 +107,7 @@ ul.topnav li.right {
 .content {
   background: #000;
   width: 100%;
-  padding-top: 100px; /* space so fixed navigation doesn't cover content */
+  /* padding-top: 100px; /* space so fixed navigation doesn't cover content */
 }
 
 
@@ -426,12 +426,12 @@ img.hover-shadow {
 @media screen and (max-width: 768px) {
   /* Intro section mobile - match music section style */
   #intro h2 {
-    font-size: 1.8em;
+    font-size: 1.6em;
   }
 
   #intro p {
-    font-size: 1.1rem;
-    line-height: 1.7;
+    font-size: 1.0rem;
+    line-height: 1.6;
   }
 
   .intro-flyer {
@@ -441,21 +441,21 @@ img.hover-shadow {
 
   /* Music section mobile */
   #music h2 {
-    font-size: 1.8em;
+    font-size: 1.6em;
   }
 
   #music p {
-    font-size: 1.1rem;
-    line-height: 1.7;
+    font-size: 1.0rem;
+    line-height: 1.6;
   }
 
   /* Gallery - preserve original fixed sizes on mobile */
   .grid-item {
-    width: 225px;
+    width: 25%;
     height: auto;
   }
 
   .grid-item--height3 {
-    height: 220px;
+    height: auto;
   }
 }
