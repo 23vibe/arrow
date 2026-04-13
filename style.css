@@ -62,7 +62,7 @@ p {
 
 ul.topnav {
   margin: auto;
-  with: 100%;
+  width: 100%;
   background-color: #333;
   padding: 1em;
   padding-left: 0px;
@@ -119,9 +119,20 @@ ul.topnav li.right {
   padding: 20px;
 }
 
-#intro img {
-  max-width: 300px;
+#intro p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+#intro h2 {
+  font-size: 1.8em;
+}
+
+.intro-flyer {
+  width: 300px;
   height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 /* ---- music section ---- */
@@ -415,17 +426,16 @@ img.hover-shadow {
 @media screen and (max-width: 768px) {
   /* Intro section mobile */
   #intro h2 {
-    font-size: 1.8em;
+    font-size: 2.4em;
   }
 
   #intro p {
-    font-size: 1.1rem;
-    line-height: 1.7;
+    font-size: 1.5rem;
+    line-height: 2.0;
   }
 
-  #intro img {
-    max-width: 100%;
-    width: 100%;
+  .intro-flyer {
+    width: 80%;
     height: auto;
   }
 
