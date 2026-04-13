@@ -111,6 +111,46 @@ ul.topnav li.right {
 }
 
 
+/* ---- intro section ---- */
+
+#intro {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#intro img {
+  max-width: 300px;
+  height: auto;
+}
+
+/* ---- music section ---- */
+
+#music {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-top: 100px;
+}
+
+#music iframe {
+  min-height: 200px;
+}
+
+#music h2 {
+  font-size: 1.5em;
+}
+
+#music p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+#music a {
+  color: orange;
+}
+
+
 /* ---- gallery ---- */
 
 #gallery {
@@ -367,4 +407,54 @@ img.hover-shadow {
 
 .hover-shadow:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+/* ---- mobile responsive ---- */
+
+@media screen and (max-width: 768px) {
+  /* Intro section mobile */
+  #intro h2 {
+    font-size: 1.8em;
+  }
+
+  #intro p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+
+  #intro img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  /* Music section mobile */
+  #music h2 {
+    font-size: 1.8em;
+  }
+
+  #music p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+
+  /* Navigation mobile */
+  ul.topnav li {
+    width: auto;
+  }
+
+  ul.topnav li a {
+    font-size: 1.2rem;
+    padding: 0 4px;
+  }
+
+  ul.topnav li a:hover {
+    font-size: 1.3rem;
+  }
+
+  ul.topnav li.first {
+    width: auto;
+    padding-left: 0.5rem;
+  }
 }
