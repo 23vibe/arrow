@@ -79,16 +79,16 @@ ul.topnav li.first {width:100px;padding-left:1rem;}
 
 ul.topnav li a {
   font-family: myFont;
-  font-size: 2rem;
+  font-size: 1rem;
   color: white;
   text-align: center;
-  line-height: 30px;
+  line-height: 25px;
   padding: 0px 0px;
   text-decoration: none;
   cursor: pointer;
 }
 ul.topnav li a:hover {
-  color: lightgray;font-size: 2.25rem;
+  color: lightgray;font-size: 1.25rem;
 }
 ul.topnav li a.active {
   color: orange !important;
@@ -100,7 +100,7 @@ ul.topnav li.right {
   margin: 0;
   display: flex;
   text-align: center;
-  line-height: 30px;
+  line-height: 25px;
   padding: 20px 16px;
   text-decoration: none;
 }
@@ -426,7 +426,7 @@ img.hover-shadow {
 @media screen and (max-width: 768px) {
   /* Intro section mobile - match music section style */
   #intro h2 {
-    font-size: 1.6em;
+    font-size: 1.2em;
   }
 
   #intro p {
@@ -451,7 +451,7 @@ img.hover-shadow {
 
   /* Gallery - preserve original fixed sizes on mobile */
   .grid-item {
-    width: 25%;
+    width: 20%;
     height: auto;
   }
 
