@@ -79,7 +79,7 @@ ul.topnav li.first {width:100px;padding-left:1rem;}
 
 ul.topnav li a {
   font-family: myFont;
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: white;
   text-align: center;
   line-height: 25px;
@@ -107,7 +107,7 @@ ul.topnav li.right {
 .content {
   background: #000;
   width: 100%;
-  /* padding-top: 100px; /* space so fixed navigation doesn't cover content */
+  padding-top: 60px; /* space so fixed navigation doesn't cover content */
 }
 
 
@@ -424,6 +424,28 @@ img.hover-shadow {
 /* ---- mobile responsive ---- */
 
 @media screen and (max-width: 768px) {
+  /* Navigation mobile */
+  ul.topnav {
+    padding: 0.5em;
+    padding-left: 0;
+    text-align: center;
+  }
+  ul.topnav li {
+    width: auto;
+    float: none;
+    display: inline-block;
+  }
+  ul.topnav li.first {
+    width: auto;
+    padding-left: 0.5rem;
+  }
+  ul.topnav li a {
+    font-size: 0.85rem;
+  }
+  ul.topnav li h2 {
+    font-size: 1em;
+  }
+
   /* Intro section mobile - match music section style */
   #intro h2 {
     font-size: 1.2em;
