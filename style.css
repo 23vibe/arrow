@@ -424,14 +424,14 @@ img.hover-shadow {
 /* ---- mobile responsive ---- */
 
 @media screen and (max-width: 768px) {
-  /* Intro section mobile */
+  /* Intro section mobile - match music section style */
   #intro h2 {
-    font-size: 2.4em;
+    font-size: 1.8em;
   }
 
   #intro p {
-    font-size: 1.5rem;
-    line-height: 2.0;
+    font-size: 1.1rem;
+    line-height: 1.7;
   }
 
   .intro-flyer {
@@ -449,22 +449,13 @@ img.hover-shadow {
     line-height: 1.7;
   }
 
-  /* Navigation mobile */
-  ul.topnav li {
-    width: auto;
+  /* Gallery - preserve original fixed sizes on mobile */
+  .grid-item {
+    width: 225px;
+    height: auto;
   }
 
-  ul.topnav li a {
-    font-size: 1.2rem;
-    padding: 0 4px;
-  }
-
-  ul.topnav li a:hover {
-    font-size: 1.3rem;
-  }
-
-  ul.topnav li.first {
-    width: auto;
-    padding-left: 0.5rem;
+  .grid-item--height3 {
+    height: 220px;
   }
 }
